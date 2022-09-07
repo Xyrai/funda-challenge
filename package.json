@@ -8,9 +8,12 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
+    "autoprefixer": "^10.4.8",
     "dotenv": "^16.0.2",
     "nuxt": "3.0.0-rc.9",
-    "sass": "^1.54.8"
+    "postcss": "^8.4.16",
+    "sass": "^1.54.8",
+    "tailwindcss": "^3.1.8"
   },
   "dependencies": {
     "bootstrap": "^5.2.1"

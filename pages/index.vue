@@ -10,6 +10,7 @@
             <p>
               {{ data?.Metadata.Omschrijving }}
             </p>
+            <p class="bg-red-400">test</p>
           </div>
         </div>
       </div>
@@ -24,5 +25,4 @@ const config = useRuntimeConfig();
 const { data } = await useFetch<IProposal>(
   `${config.API_BASE_URL}/json/${config.API_KEY}/?type=koop&zo=/amsterdam/tuin/p1`
 );
-console.log(data);
 </script>
