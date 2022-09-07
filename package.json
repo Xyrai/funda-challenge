@@ -16,6 +16,7 @@
     "tailwindcss": "^3.1.8"
   },
   "dependencies": {
+    "@funda/ui": "github:funda-frontend/ui",
     "bootstrap": "^5.2.1"
   }
 }

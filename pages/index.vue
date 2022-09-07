@@ -10,7 +10,7 @@
             <p>
               {{ data?.Metadata.Omschrijving }}
             </p>
-            <p class="bg-red-400">test</p>
+            <UiButton :tone="'primary'">Test</UiButton>
           </div>
         </div>
       </div>
@@ -20,6 +20,7 @@
 
 <script setup lang="ts">
 import { IProposal } from '@/interfaces/IProposal';
+import UiButton from '@/node_modules/@funda/ui/src/components/ui-button.vue';
 const config = useRuntimeConfig();
 
 const { data } = await useFetch<IProposal>(
