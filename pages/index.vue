@@ -5,13 +5,9 @@
         <div class="row">
           <div class="col-12">
             <h1 class="text-3xl font-semibold text-center">
-              {{ data?.TotaalAantalObjecten }} {{ data?.Metadata.Titel }}
+              Uitgelichte koopwoningen
             </h1>
-            <p class="text-center my-3">
-              {{ data?.Metadata.Omschrijving }}
-            </p>
             <hr class="my-3" />
-            <!-- <UiButton>Test</UiButton> -->
           </div>
         </div>
       </div>
