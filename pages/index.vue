@@ -26,7 +26,7 @@
               v-for="item in data?.Objects.slice(0, 5)"
               :key="item.GlobalId"
             >
-              <a href="#" class="posts-link">
+              <a :href="item.URL" class="posts-link" target="_blank">
                 <picture>
                   <source :srcset="item.FotoLarge" media="(min-width:1400px)" />
 
@@ -61,12 +61,12 @@
                 v-for="item in data?.Objects.slice(0, 5)"
                 :key="item.GlobalId"
               >
-                <a class="news__item" href="#"
-                  ><p class="news__title ellipsis">{{ item.Adres }}</p>
+                <a class="news__item" :href="item.URL" target="_blank">
+                  <p class="news__title ellipsis">{{ item.Adres }}</p>
                   <p class="news__date">
                     {{ item.AangebodenSindsTekst }}
-                  </p></a
-                >
+                  </p>
+                </a>
               </li>
             </ul>
             <a href="/kopen" class="news__more">Meer</a>
@@ -75,17 +75,24 @@
       </div>
     </section>
 
-    <section>
+    <section class="pt-5">
       <div class="container text-center">
-        <h2 class="text-3xl font-semibold">Alle koopwoningen bekijken?</h2>
-        <UiButton class="mt-4 mb-5" :href="'/kopen'">Klik hier!</UiButton>
+        <h2 class="text-2xl mt-3 font-semibold">Alle woningen bekijken?</h2>
+        <!-- Tailwind/Bootstrap gaps dont work so had to use inline styling -->
+        <div class="flex justify-center" style="column-gap: 20px">
+          <UiButton class="mt-4 mb-5" :href="'/kopen'">Koopwoningen</UiButton>
+          <UiButton class="mt-4 mb-5" :href="'/huren'">Huurwoningen</UiButton>
+        </div>
       </div>
     </section>
   </main>
 </template>
 
 <script setup lang="ts">
+// TS Interfaces
 import { IProposal } from '@/interfaces/IProposal';
+
+// Funda UI Library
 import UiButton from '@/node_modules/@funda/ui/src/components/ui-button.vue';
 
 // Swiper
@@ -97,23 +104,22 @@ import 'swiper/css/pagination';
 const modules = [Pagination];
 
 const config = useRuntimeConfig();
-
 const { data } = await useFetch<IProposal>(
   `${config.API_BASE_URL}/json/${config.API_KEY}/?type=koop&zo=/amsterdam/tuin/p1`
 );
-console.log(data);
 </script>
 
 <style lang="scss">
 main {
   background: url('@/assets/img/tile-bg.png');
   background-size: cover;
+  background-color: #0e071d;
   color: #fff;
 
-  // NOTE: Remove duplicate css per media query
-  .recent-posts {
-    padding-bottom: 50px;
+  // NOTE: I made this for another website but never got to clean the CSS up, so it might have some duplicate code in there per media query
+  // And yes it could also be turned into a Component :)
 
+  .recent-posts {
     .posts {
       display: flex;
       justify-content: center;
@@ -125,7 +131,7 @@ main {
       .custom-swiper {
         width: 100%;
         height: 100%;
-        border: 1px solid white;
+        border: 1px solid #fff;
         margin: 0;
       }
 

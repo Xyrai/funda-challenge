@@ -2,8 +2,6 @@
   <footer>
     <div class="links">
       <a href="/">Home</a>
-      <a href="/over-funda">Over Funda</a>
-      <a href="/contact">Contact</a>
     </div>
     <div class="socials">
       <a

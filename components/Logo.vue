@@ -1,5 +1,5 @@
 <template>
-  <NuxtLink to="/" class="logo-link">
+  <a href="/" class="logo-link">
     <img
       class="logo"
       src="@/assets/img/fundawonen-logo.svg"
@@ -7,7 +7,7 @@
       height="36"
       alt="Funda Logo"
     />
-  </NuxtLink>
+  </a>
 </template>
 
 <style lang="scss" scoped>

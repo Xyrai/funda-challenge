@@ -6,15 +6,11 @@
           <div class="wrapper">
             <Logo />
             <nav>
-              <NuxtLink
-                :class="route.path == '/kopen' ? 'active' : null"
-                to="/kopen"
-                >Kopen</NuxtLink
+              <a :class="route.path == '/kopen' ? 'active' : null" href="/kopen"
+                >Kopen</a
               >
-              <NuxtLink
-                :class="route.path == '/huren' ? 'active' : null"
-                to="/huren"
-                >Huren</NuxtLink
+              <a :class="route.path == '/huren' ? 'active' : null" href="/huren"
+                >Huren</a
               >
             </nav>
           </div>
@@ -61,7 +57,7 @@ header {
     }
 
     @include media-breakpoint-up(lg) {
-      column-gap: px(50);
+      column-gap: 50px;
     }
   }
 }
