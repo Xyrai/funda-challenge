@@ -12,13 +12,12 @@
             ? post.Koopprijs.toString().replace(
                 /(\d)(?=(\d{3})+(?!\d))/g,
                 '$1.'
-              )
+              ) + ' k.k.'
             : post.Huurprijs.toString().replace(
                 /(\d)(?=(\d{3})+(?!\d))/g,
                 '$1.'
-              )
+              ) + ' /mnd'
         }}
-        k.k.
       </p>
     </div>
   </a>
