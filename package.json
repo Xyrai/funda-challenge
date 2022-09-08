@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "@funda/ui": "github:funda-frontend/ui",
-    "bootstrap": "^5.2.1"
+    "bootstrap": "^5.2.1",
+    "swiper": "^8.3.2"
   }
 }
